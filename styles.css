@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Scrolling Banner */
+.scrolling-banner {
+    position: fixed; /* Fixed position, stays on the screen */
+    top: 120px; /* Adjust based on your navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #ff5733; /* Background color for the banner */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    z-index: 9999; /* Ensure it appears above other content */
+    animation: scroll-left 10s linear infinite; /* Animation for scrolling effect */
+}
+
+/* Animation for the scrolling text */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+
+/* Header (Navbar) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background: maroon; /* Background color as a fallback */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: relative;
+    z-index: 10; /* Ensure navbar stays below the scrolling banner */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url('img/Luxury\ Indian\ Designer\ Clothing\ Online\ -\ Indiaspopup_com.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px; /* Set the height for the navbar */
+    width: 300%;
+}
+
+
+
+/* Header (Navbar) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background: maroon; /* Background color as a fallback */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url('img/Luxury\ Indian\ Designer\ Clothing\ Online\ -\ Indiaspopup_com.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 450px; /* Set a height for the navbar */
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+/* Style the logo image */
+.logo img {
+    height: 120px;
+    width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 50;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    color:white;
+}
+
+/* List Item */
+.nav-links li {
+    display: inline;
+}
+
+/* Link Styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    text-align: center;
+    margin-top: 80px; /* Ensure hero section starts below the banner */
+}
+
+/* Hero Text */
+.hero-text {
+    max-width: 80vh; /* Optional, to limit the width of the text */
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.shop-now-btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.shop-now-btn:hover {
+    background-color: #ff9900; /* Hover effect */
+}
+
+/* Shop Section */
+.shop-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.shop-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #ff5733;
+}
+
+.product-card label {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.product-card select {
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.product-card .add-to-bag {
+    background-color: #ffcc00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.product-card .add-to-bag:hover {
+    background-color: #ff9900;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

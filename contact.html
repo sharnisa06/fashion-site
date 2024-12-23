@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Our Contact Details</h2>
+            <p><strong>Email:</strong> info@mytalorzone.com</p>
+            <p><strong>Phone:</strong> +91 9884866783</p>
+
+            <div class="social-media">
+                <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon">
+                    <img src="img/insta.jpeg" alt="Instagram Logo" class="social-logo"> Instagram
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
+                    <img src="img/twitter.png" alt="Twitter Logo" class="social-logo"> Twitter
+                </a>
+                <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                    <img src="img/fb.png" alt="Facebook Logo" class="social-logo"> Facebook
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        
+
+    <footer class="footer">
+        <p>© 2024 mytalorzone. All rights reserved.</p>
+    </footer>
+</body>
+</html>

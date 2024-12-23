@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtha Categories</title>
+    <link rel="stylesheet" href="shop-styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Background image section -->
+        <div class="banner"></div>
+
+        <!-- Ad banner below the background image -->
+        <div class="ad-banner">
+            <span>50% OFF on all TRADITIONAL WEARS!!!! Limited!</span>
+        </div>
+
+        <!-- Category images below the ad banner -->
+        <div class="category-images">
+            <div class="category" onclick="showProducts('traditional')">
+                <img src="img/t10.jpeg" alt="Traditional">
+                <button>Traditional</button>
+            </div>
+            <div class="category" onclick="showProducts('tops')">
+                <img src="img/d2.jpeg" alt="Tops">
+                <button>Tops</button>
+            </div>
+            <div class="category" onclick="showProducts('bottoms')">
+                <img src="img/b1.jpeg" alt="Bottoms">
+                <button>Bottoms</button>
+            </div>
+            <div class="category" onclick="showProducts('nightwear')">
+                <img src="img/n3.jpeg" alt="Night Wear">
+                <button>Night Wear</button>
+            </div>
+        </div>
+
+        <div class="products" id="products-container">
+            <!-- Products will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            traditional: [
+                { name: 'royal classy', img: 'img/t1.jpeg', price: 'RS 900', size: ['S', 'M', 'L'], rating: 4.5 },
+                { name: 'rose gold', img: 'img/t2.jpeg', price: 'RS 1200', size: ['XS','L','S', 'M'], rating: 4.0 },
+                { name: 'blue heaven', img: 'img/t3.jpeg', price: 'RS 850', size: ['XS','S','M', 'L','XL'], rating: 3.5 },
+                { name: 'orange fall', img: 'img/t4.jpeg', price: 'RS 2000', size: ['XS','S','M', 'L','XL'], rating: 3.5 },
+                { name: 'pink fall', img: 'img/t5.jpeg', price: 'RS 900', size: ['XS','S','M', 'L','XL'], rating: 3.5 },
+                { name: 'floral printed', img: 'img/t6.jpeg', price: 'RS 990', size:['XS','S','M', 'L','XL'], rating: 3.5 },
+                { name: 'red bazaar', img: 'img/t7.jpeg', price: 'RS 600', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'ethnic saree', img: 'img/t8.jpeg', price: 'RS 3000', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'royalty', img: 'img/t9.jpeg', price: 'RS 4440', size:['XS','S','M', 'L','XL'] , rating: 4.5 }
+            ],
+            tops: [
+                { name: 'dark blue printed', img: 'img/d1.jpeg', price: 'RS 300', size:['XS','S','M', 'L','XL'] , rating: 4.0 },
+                { name: 'bell sleeves', img: 'img/d2.jpeg', price: 'RS 700', size:['XS','S','M', 'L','XL'] , rating: 4.5 },
+                { name: 'floral top', img: 'img/d3.jpeg', price: 'RS 850', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'crop top', img: 'img/d4.jpeg', price: 'RS 650', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'netted white', img: 'img/d5.jpeg', price: 'RS 990', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'yellow nest', img: 'img/d6.jpeg', price: 'RS 770', size:['XS','S','M', 'L','XL'] , rating: 4.5 },
+                { name: 'royal green', img: 'img/d7.jpeg', price: 'RS 440', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'half sleeve', img: 'img/d8.jpeg', price: 'RS 880', size: ['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'deep neck', img: 'img/d9.jpeg', price: 'RS 1000', size: ['XS','S','M', 'L','XL'], rating: 4.5 }
+            ],
+            bottoms: [
+                { name: 'printed black', img: 'img/b1.jpeg', price: 'RS 990', size: ['XS','S','M', 'L','XL'], rating: 4.9 },
+                { name: 'shorts', img: 'img/b2.jpeg', price: 'RS 650', size:['XS','S','M', 'L','XL'] , rating: 3.8 },
+                { name: 'whiter stare', img: 'img/b3.jpeg', price: 'RS 980', size: ['XS','S','M', 'L','XL'], rating: 3.8 },
+                { name: 'rose pink', img: 'img/b4.jpeg', price: 'RS 550', size: ['XS','S','M', 'L','XL'], rating: 4.6 },
+                { name: 'trendy skirt', img: 'img/b5.jpeg', price: 'RS 2000', size: ['XS','S','M', 'L','XL'], rating: 3.8 },
+                { name: 'black skirt', img: 'img/b6.jpeg', price: 'RS 900', size: ['XS','S','M', 'L','XL'], rating: 4.9 },
+                { name: 'baggy wear', img: 'img/b7.jpeg', price: 'RS 2000', size: ['XS','S','M', 'L','XL'], rating: 4.7},
+                { name: 'printed flora', img: 'img/b8.jpeg', price: 'RS 1000', size: ['XS','S','M', 'L','XL'], rating: 4.4 },
+                { name: 'torn wear', img: 'img/b9.jpeg', price: 'RS 760', size: ['XS','S','M', 'L','XL'], rating: 4.1 }
+            ],
+            nightwear: [
+                { name: 'blue wear', img: 'img/n1.jpeg', price: 'RS 790', size: ['XS','S','M', 'L','XL'], rating: 4.2 },
+                { name: 'floral wear', img: 'img/n2.jpeg', price: 'RS 780', size:['XS','S','M', 'L','XL'], rating: 4.5 },
+                { name: 'red rose', img: 'img/n3.jpeg', price: 'RS 900', size:['XS','S','M', 'L','XL'], rating: 4.2 },
+                { name: 'heaven wear', img: 'img/n4.jpeg', price: 'RS 750', size:['XS','S','M', 'L','XL'], rating: 4.6 },
+                { name: 'printed wear', img: 'img/n5.jpeg', price: 'RS 550', size: ['XS','S','M', 'L','XL'], rating: 4.7 },
+                { name: 'red sea', img: 'img/n6.jpeg', price: 'RS 790', size: ['XS','S','M', 'L','XL'], rating: 4.2 },
+                { name: 'green rose', img: 'img/n7.jpeg', price: 'RS 980', size:['XS','S','M', 'L','XL'], rating: 4.2 },
+                { name: 'smoky pink', img: 'img/n8.jpeg', price: 'RS 580', size: ['XS','S','M', 'L','XL'], rating: 4.3 },
+                { name: 'royal green wear', img: 'img/n9.jpeg', price: 'RS 980', size: ['XS','S','M', 'L','XL'], rating: 4.2 }
+            ]
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function showProducts(category) {
+            const container = document.getElementById('products-container');
+            container.innerHTML = '';
+            products[category].forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'product';
+                productDiv.innerHTML = `
+                    <img src="${product.img}" alt="${product.name}">
+                    <p><strong>${product.name}</strong></p>
+                    <p>Size: ${product.size}</p>
+                    <p>Price: ${product.price}</p>
+                    <button onclick="addToCart('${category}', '${product.name}')">Add to Cart</button>
+                `;
+                container.appendChild(productDiv);
+            });
+        }
+
+        function addToCart(category, productName) {
+            const product = products[category].find(p => p.name === productName);
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product.name} added to cart!`); // Corrected the alert statement
+        }
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 mytalorzone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

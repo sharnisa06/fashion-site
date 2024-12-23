@@ -1,0 +1,161 @@
+/* contact.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: right;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-section {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #ff6347;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+.contact-form {
+    background-color:pink;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ff4500;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: none;
+    margin: 0 auto;
+    display: block;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+.contact-info {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.social-icon i {
+    font-size: 30px; /* Adjust size of the icons */
+    margin-right: 10px; 
+}
+
+.social-icon:hover {
+    color: #0073e6; /* Change to your preferred hover color */
+}
+.social-icon img {
+    width: 30px; /* Adjust the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the logo and text */
+    vertical-align: middle; /* Align logo and text vertically */
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-icon:hover {
+    color: #0073e6; /* Change on hover */
+}
+
+.contact-us {
+    background-color: darkcyan; /* Change this to your desired color */
+    padding: 20px;  /* Adds some padding around the content */
+    border-radius: 8px; /* Optional: Rounds the corners */
+}
+
+.contact-us h2 {
+    text-align: center;
+    color: #333; /* You can change this color as needed */
+}
+
+.contact-info p {
+    color: #555; /* Text color */
+}
+
